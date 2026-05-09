@@ -1,0 +1,11 @@
+# Python environments
+.venv/
+venv/
+ENV/
+env/
+
+# Environment variables
+.env
+
+# Requirements file
+requirements.txt

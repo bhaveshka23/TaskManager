@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow Pro | Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page landing auth-page">
+    <nav class="nav">
+      <div class="brand">
+        <div>
+          <p class="eyebrow">Smart Task Management</p>
+          <h1>TaskFlow Pro</h1>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <a class="secondary-button" href="index.html">Back</a>
+      </div>
+    </nav>
+
+    <main class="auth-layout">
+      <section class="panel-card auth-card">
+        <h2>Welcome back</h2>
+        <p class="muted">Sign in to continue managing tasks.</p>
+        <div class="tabs">
+          <button class="tab active" type="button" data-tab="login">Login</button>
+          <button class="tab" type="button" data-tab="register">Register</button>
+        </div>
+
+        <form id="loginForm" class="form">
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Password
+            <span class="password-field">
+              <input type="password" name="password" placeholder="Password" required />
+              <button class="toggle-password" type="button" aria-label="Show password">Show</button>
+            </span>
+          </label>
+          <button class="primary-button" type="submit">
+            <span>Login</span>
+            <span class="button-spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <form id="registerForm" class="form hidden">
+          <label>
+            Username
+            <input type="text" name="username" placeholder="alexandra" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Password
+            <span class="password-field">
+              <input type="password" name="password" placeholder="Create a password" required />
+              <button class="toggle-password" type="button" aria-label="Show password">Show</button>
+            </span>
+          </label>
+          <button class="primary-button" type="submit">
+            <span>Create account</span>
+            <span class="button-spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <p id="authMessage" class="message"></p>
+      </section>
+    </main>
+  </div>
+
+  <script src="common.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>
