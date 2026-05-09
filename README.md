@@ -42,13 +42,14 @@ task-manager-frontend/
 ### 1. Clone the repo
 
 ```bash
-git clone <repo-url>
-cd task-manager-backend
+git clone https://github.com/bhaveshka23/TaskManager.git
+cd TaskManager
 ```
 
 ### 2. Create and activate a virtual environment
 
 ```bash
+cd task-manager-backend
 python -m venv .venv
 # Windows
 .venv\Scripts\activate
@@ -77,7 +78,7 @@ Create the database in PostgreSQL, then either:
 
 **Option A** — let SQLAlchemy create the tables automatically on first run (handled in `run.py`).
 
-**Option B** — run the schema manually:
+**Option B** — run the schema manually from the repo root:
 
 ```bash
 psql -U <user> -d <db_name> -f database_schema.sql
@@ -91,13 +92,12 @@ python run.py
 
 The API will be available at `http://127.0.0.1:5000`.
 
-### 7. Open the frontend
+### 7. Run the frontend
 
-Open `task-manager-frontend/index.html` in a browser, or serve it with any static file server:
+Serve the static files on a port allowed by CORS (3000 or 5500):
 
 ```bash
-# e.g. using Python
-cd task-manager-frontend
+cd ../task-manager-frontend
 python -m http.server 3000
 ```
 
